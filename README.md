@@ -18,6 +18,9 @@ After completing this module you will be able to:
 
 ## Steps
 
-1 - Create a new Visualforce Page
+**1 - Create a new Visualforce Page**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From Setup, **Develop** | **Pages**, then click on **New** button.
+
+**1 - Prepare the page for Bootstap support**
+
