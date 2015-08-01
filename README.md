@@ -76,3 +76,41 @@ IMPORTANT: For better performance and to avoid styling issues, import the resour
 	        <br/>
 	        <div id="result"></div>	
 	</div>
+	
+This is basically an HTML form, that uses the Bootstrap CSS classes.
+
+**3 - Use Remote Objects for data creation**
+
+Finally, we will add the javascript logic to perform some data creation.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Append the following code below:
+
+	<apex:remoteObjects >
+        	<apex:remoteObjectModel name="Lead" fields="FirstName,LastName,Company"/>
+    	</apex:remoteObjects>
+    
+	<script>
+    	function createLead(){
+            var newLead = new SObjectModel.Lead();
+            
+            newLead.set('FirstName', document.getElementById("firstName").value );
+    		newLead.set('LastName', document.getElementById("lastName").value );
+            newLead.set('Company',document.getElementById("company").value );
+
+            newLead.create(function(err,result,event) {
+                if(err) {
+                    document.getElementById("result").innerHTML = '<div class="alert alert-danger" role="alert">'+
+                        						'<strong>Error! </strong>'+
+                        							err.message+
+                    							'</div>';
+                		}
+                else {
+                    document.getElementById("result").innerHTML = '<div class="alert alert-success" role="alert">'+
+                						'<strong>Success! </strong> Lead Created with ID: '+
+                        					newLead.get('Id')+
+                    						'</div>'; 
+                		}
+        		});
+            
+        	}    	
+    	</script>
