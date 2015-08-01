@@ -38,10 +38,10 @@ Here you will import the necessary resources to make this page Bootstrap ready.
 3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Copy following code in Visualforce editor window
 
 
-		<pre>
+		
 		<apex:page title="Trailhead QuickStart" standardcontroller="Account" showheader="false">
 
 		<h1> Hello World, Hello Dreamforce! </h1>
 
 		</apex:page>
-		</pre>
+		
