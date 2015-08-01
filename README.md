@@ -114,3 +114,8 @@ Finally, we will add the javascript logic to perform some data creation.
             
         	}    	
     	</script>
+
+**3 - Run the Page**
+
+You're done! You got it!.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Just click on **Save** button and after that on **Preview**. Finally Enjoy what you've done!
