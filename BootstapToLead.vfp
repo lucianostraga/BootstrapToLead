@@ -1,0 +1,70 @@
+<apex:page sidebar="false" standardStylesheets="false" showHeader="false" docType="html-5.0">
+    
+    <apex:includeScript value="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"/>
+    <apex:includeScript value="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"/>
+    <apex:stylesheet value="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+    <apex:stylesheet value="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"/>
+    
+    <div class="container">
+        
+        <div class="page-header">
+          <h1>Lead Creator <small>with Bootstrap and RemoteObjects!!</small></h1>
+        </div>
+        
+        <form>
+            
+          <div class="form-group">
+            <label for="exampleInputEmail1">First Name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="First Name"/>
+          </div>
+            
+          <div class="form-group">
+            <label for="exampleInputEmail1">Last Name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Last Name"/>
+          </div>
+            
+          <div class="form-group">
+            <label for="exampleInputEmail1">Company</label>
+              <input type="text" class="form-control" id="company" placeholder="Company"/>
+          </div>  
+            
+          <button type="button" onClick="createLead();" class="btn btn-primary">Submit</button>
+        </form>
+        
+        <br/>
+        
+        <div id="result"></div>	
+        
+    </div>
+    
+    <apex:remoteObjects >
+        <apex:remoteObjectModel name="Lead" fields="FirstName,LastName,Company"/>
+    </apex:remoteObjects>
+    
+    <script>
+    	function createLead(){
+            var newLead = new SObjectModel.Lead();
+            
+            newLead.set('FirstName', document.getElementById("firstName").value );
+    		newLead.set('LastName', document.getElementById("lastName").value );
+            newLead.set('Company',document.getElementById("company").value );
+
+            newLead.create(function(err,result,event) {
+                if(err) {
+                    document.getElementById("result").innerHTML = '<div class="alert alert-danger" role="alert">'+
+                        											'<strong>Error! </strong>'+
+                        												err.message+
+                    											  '</div>';
+                }
+                else {
+                    document.getElementById("result").innerHTML = '<div class="alert alert-success" role="alert">'+
+                        											'<strong>Success! </strong> Lead Created with ID: '+
+                        												newLead.get('Id')+
+                    											  '</div>'; 
+                }
+        	});
+            
+        }    	
+    </script>
+    
+</apex:page>
