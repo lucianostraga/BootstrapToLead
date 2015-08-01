@@ -22,5 +22,17 @@ After completing this module you will be able to:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From Setup, **Develop** | **Pages**, then click on **New** button.
 
-**1 - Prepare the page for Bootstap support**
+**2 - Prepare the page for Bootstap support**
 
+Here you will import the necessary resources to make this page Bootstrap ready.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In the code edit, paste the folling code:
+
+<apex:page sidebar="false" standardStylesheets="false" showHeader="false" docType="html-5.0">
+    
+    <apex:includeScript value="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"/>
+    <apex:includeScript value="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"/>
+    <apex:stylesheet value="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+    <apex:stylesheet value="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"/>
+    
+</apex:page>    
