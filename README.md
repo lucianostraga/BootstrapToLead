@@ -41,5 +41,38 @@ IMPORTANT: For better performance and to avoid styling issues, import the resour
 	
 	<div class="bootstap">
 		Your page content here...
-	</di>
+	</div>
 
+**3 - Add the Custom Page Content**
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add the following code below to the page:
+
+	<div class="container">
+        
+	        <div class="page-header">
+	          <h1>Lead Creator <small>with Bootstrap and RemoteObjects!!</small></h1>
+	        </div>
+        
+	        <form>
+	            
+		          <div class="form-group">
+		            <label for="exampleInputEmail1">First Name</label>
+		              <input type="text" class="form-control" id="firstName" placeholder="First Name"/>
+		          </div>
+		            
+		          <div class="form-group">
+		            <label for="exampleInputEmail1">Last Name</label>
+		              <input type="text" class="form-control" id="lastName" placeholder="Last Name"/>
+		          </div>
+		            
+		          <div class="form-group">
+		            <label for="exampleInputEmail1">Company</label>
+		              <input type="text" class="form-control" id="company" placeholder="Company"/>
+		          </div>  
+		            
+		          <button type="button" onClick="createLead();" class="btn btn-primary">Submit</button>
+	        </form>
+        
+	        <br/>
+	        <div id="result"></div>	
+	</div>
