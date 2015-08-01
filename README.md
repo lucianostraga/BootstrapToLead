@@ -37,5 +37,9 @@ Here you will import the necessary resources to make this page ready for Bootstr
 	    
 	</apex:page>    
 	
-IMPORTANT: For better performance and to avoid styling issues, import the resources as static resources and create custom namespaces like <div class="bootstap"></di>
+IMPORTANT: For better performance and to avoid styling issues, import the resources as static resources and create custom namespaces like:
+	
+	<div class="bootstap">
+		Your page content here...
+	</di>
 
