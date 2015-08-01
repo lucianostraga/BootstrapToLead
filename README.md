@@ -94,7 +94,7 @@ Finally, we will add the javascript logic to perform some data creation.
             var newLead = new SObjectModel.Lead();
             
             newLead.set('FirstName', document.getElementById("firstName").value );
-    		newLead.set('LastName', document.getElementById("lastName").value );
+            newLead.set('LastName', document.getElementById("lastName").value );
             newLead.set('Company',document.getElementById("company").value );
 
             newLead.create(function(err,result,event) {
@@ -114,6 +114,8 @@ Finally, we will add the javascript logic to perform some data creation.
             
         	}    	
     	</script>
+
+So simple,just use the 'create' function for any sObject creation.
 
 **3 - Run the Page**
 
