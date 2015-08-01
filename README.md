@@ -24,9 +24,9 @@ After completing this module you will be able to:
 
 **2 - Prepare the page for Bootstap support**
 
-Here you will import the necessary resources to make this page Bootstrap ready.
+Here you will import the necessary resources to make this page ready for Bootstrap. Bootstrap requires jQuery and other .js and css files to work.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In the code edit, paste the folling code:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In the code edit, paste the following code:
 
 	<apex:page sidebar="false" standardStylesheets="false" showHeader="false" docType="html-5.0">
 	
@@ -36,4 +36,6 @@ Here you will import the necessary resources to make this page Bootstrap ready.
 	    <apex:stylesheet value="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"/>
 	    
 	</apex:page>    
+	
+IMPORTANT: For better performance and to avoid styling issues, import the resources as static resources and create custom namespaces like <div class="bootstap"></di>
 
