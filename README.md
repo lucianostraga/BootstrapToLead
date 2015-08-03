@@ -130,6 +130,6 @@ Yo have successfully created a totally custom Visualforce page using Bootstrap w
 
 ## Resources
 
-https:getbootstrap.com
+https://getbootstrap.com
 https://developer.salesforce.com/docs/atlas.en-us.pages.meta/pages/pages_remote_objects.htm
 
