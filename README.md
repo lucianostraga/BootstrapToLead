@@ -117,7 +117,7 @@ Finally, we will add the javascript logic to perform some data creation.
 
 So simple,just use the 'create' function for any sObject creation.
 
-**3 - Run the Page**
+**4 - Run the Page**
 
 You're done! You got it!.
 
