@@ -122,3 +122,14 @@ So simple,just use the 'create' function for any sObject creation.
 You're done! You got it!.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Just click on **Save** button and after that on **Preview**. Finally Enjoy what you've done!
+
+## Summary 
+
+Yo have successfully created a totally custom Visualforce page using Bootstrap web framework. Also you have taken advantage of the Remote Objects to manipulate data in Salesforce, all with javascript and without any Apex line.
+
+
+## Resources
+
+https:getbootstrap.com
+https://developer.salesforce.com/docs/atlas.en-us.pages.meta/pages/pages_remote_objects.htm
+
